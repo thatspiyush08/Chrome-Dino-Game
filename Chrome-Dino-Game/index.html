@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="board"></canvas>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Image Move Animation</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+
+  <script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Create an Image object
+    var img = new Image();
+    img.src = 'img/big-cactus1.png';
+
+    // Initial position of the image
+    var x = 100;
+    var y = 100;
+
+    // Target position for animation
+    var targetX = 500;
+    var targetY = 100;
+
+    // Wait for the image to load before starting the animation
+    img.onload = function() {
+      animate();
+    };
+
+    function animate() {
+      // Calculate the next position with a simple easing effect
+      x += (targetX - x) * 0.1;
+      y += (targetY - y) * 0.1;
+
+      // Clear the canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw the image at the current position
+      ctx.drawImage(img, x, y);
+
+      // Request the next animation frame
+      requestAnimationFrame(animate);
+    }
+
+    // Add a click event listener to the canvas
+    canvas.addEventListener('click', function(event) {
+      // Update the target position based on the click coordinates
+      targetX = event.clientX - canvas.getBoundingClientRect().left;
+      targetY = event.clientY - canvas.getBoundingClientRect().top;
+    });
+  </script>
+</body>
+</html> -->
