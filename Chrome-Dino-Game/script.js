@@ -62,7 +62,7 @@ function animate(arr1, arr2, arr3, arr4, arr5) {
         var cactusWidth = 50;
         var cactusHeight = 50;
     
-        for (var i = 0; i < numDuplicates; i++) {
+        for (var i = i; i < numDuplicates; i++) {
             var x = i * spacing;
             var y = 423;
     
@@ -118,7 +118,7 @@ function animate(arr1, arr2, arr3, arr4, arr5) {
 
         for (var i = 0; i < numDuplicates; i++) {
             var randomNumber = Math.random();
-            var x = (350 * (i + 4)) + 100;
+            var x = (350 * (i + 4)) + 200;
             var y = 430 ;
 
             // Create a new instance of the image for each bird
@@ -136,23 +136,24 @@ function animate(arr1, arr2, arr3, arr4, arr5) {
         var numDuplicates = 250;
         var spacing = 1000;
 
-        for (var i = 0; i < numDuplicates; i++) {
-            var randomNumber = Math.random();
-            var x = (350 * (i + 4)) + 100;
-            var y = 430 - 67;
+        // for (var i = 0; i < numDuplicates; i++) {
+        //     var randomNumber = Math.random();
+        //     var x = (350 * (i + 4)) + 200;
+        //     var y = 430 - 67;
 
-            // Create a new instance of the image for each bird
-            var currentDownbirdImg = new Image();
-            currentDownbirdImg.src = downbirdImg.src;
+        //     // Create a new instance of the image for each bird
+        //     var currentDownbirdImg = new Image();
+        //     currentDownbirdImg.src = downbirdImg.src;
 
-            downbirds.push({ "img": currentDownbirdImg, "x": x, "y": y });
-            context.drawImage(currentDownbirdImg, x, y, 40, 40);
-        }
-    setInterval(function () {
-        animate(bigCacti, clouds, downbirds, upbirds, tracks);
-    }, 32); // 60 frames per second (1000 ms / 60 frames)
+        //     downbirds.push({ "img": currentDownbirdImg, "x": x, "y": y });
+        //     context.drawImage(currentDownbirdImg, x, y, 40, 40);
+        // }
+    
     
 };
+setInterval(function () {
+    animate(bigCacti, clouds, downbirds, upbirds, tracks);
+}, 32); // 60 frames per second (1000 ms / 60 frames)
 
 
 }
