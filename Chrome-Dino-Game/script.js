@@ -62,7 +62,7 @@ function animate(arr1, arr2, arr3, arr4, arr5) {
         var cactusWidth = 50;
         var cactusHeight = 50;
     
-        for (var i = i; i < numDuplicates; i++) {
+        for (var i = 1; i < numDuplicates; i++) {
             var x = i * spacing;
             var y = 423;
     
